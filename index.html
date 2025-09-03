@@ -9,40 +9,56 @@
     <!-- Fontes Inter e Font Awesome para ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+      <style>
         /* Variáveis CSS combinadas - priorizando o conjunto mais abrangente do expansao.php */
         :root {
-            --primary: #8a2be2; /* Ajustado para corresponder ao roxo do expansao.php */
-            --primary-dark: #6a0dad; /* Ajustado */
-            --primary-light: #ab82ff; /* Ajustado */
-            --primary-ultra-light: #dac4ff; /* Do expansao */
-            --secondary: #1a1a1a; /* Do expansao */
-            --secondary-light: #2a2a2a; /* Do expansao */
-            --background: #0a0a0a; /* Do expansao */
-            --background-light: #151515; /* Do expansao */
-            --card: #1c1c1c; /* Do expansao */
-            --card-hover: #242424; /* Do expansao */
-            --text-primary: #f0f0f0; /* Do expansao */
-            --text-secondary: #b0b0b0; /* Do expansao */
-            --text-muted: #808080; /* Do expansao */
-            --success: #48bb78; /* Comum */
-            --error: #f56565; /* Comum */
-            --warning: #ed8936; /* Do expansao */
-            --border: #333333; /* Comum */
-            --border-light: rgba(255, 255, 255, 0.1); /* Do expansao */
-            --shadow: rgba(0, 0, 0, 0.5); /* Do expansao */
-            --shadow-lg: rgba(0, 0, 0, 0.7); /* Do expansao */
-            --glow: rgba(138, 43, 226, 0.5); /* Ajustado para o novo primary */
-            --glow-intense: rgba(138, 43, 226, 1); /* Ajustado */
-            --pulse-glow: rgba(138, 43, 226, 0.8); /* Ajustado */
-            --glass-bg: rgba(28, 28, 28, 0.05); /* Do expansao */
-            --glass-border: rgba(255, 255, 255, 0.08); /* Do expansao */
-            --discord-gray: #2C2F33; /* Do expansao */
-            --discord-dark-gray: #23272A; /* Do expansao */
+  /* --- Cores principais --- */
+  --primary: #1e90ff; /* Azul principal */
+  --primary-dark: #1c86ee; /* Azul mais escuro */
+  --primary-light: #63b3ff; /* Azul claro */
+  --primary-ultra-light: #cce4ff; /* Azul bem clarinho */
 
+  /* --- Cores secundárias e fundo --- */
+  --secondary: #0d0d0d; /* Mantém contraste escuro para elementos secundários */
+  --secondary-light: #1a1a1a;
+  --background: #001f3f; /* Fundo azul escuro */
+  --background-light: #003366; /* Fundo azul um pouco mais claro */
+
+  /* --- Cards e interações --- */
+  --card: #00264d; /* Azul escuro para cartões */
+  --card-hover: #003366; /* Hover azul */
+  
+  /* --- Textos --- */
+  --text-primary: #f0f0f0; /* Branco para contraste */
+  --text-secondary: #b0b0b0;
+  --text-muted: #808080;
+
+  /* --- Feedback --- */
+  --success: #48bb78; /* Verde */
+  --error: #f56565;   /* Vermelho */
+  --warning: #ed8936; /* Laranja */
+
+  /* --- Bordas e sombras --- */
+  --border: #333333;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-lg: rgba(0, 0, 0, 0.7);
+
+  /* --- Efeitos de brilho --- */
+  --glow: rgba(30, 144, 255, 0.5); /* Azul glow */
+  --glow-intense: rgba(30, 144, 255, 1);
+  --pulse-glow: rgba(30, 144, 255, 0.8);
+
+  /* --- Efeito glassmorphism --- */
+  --glass-bg: rgba(0, 38, 77, 0.05); /* Transparência azulada */
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* --- Discord-style (opcional) --- */
+  --discord-gray: #2C2F33;
+  --discord-dark-gray: #23272A;
+        }
             /* Imagem de fundo personalizada do expansao.php */
-            --custom-background-image: url('https://crimsonstrauss.xyz/background/tarefas/tarefas.png');
+            --custom-background-image: url('https://trollchipss.netlify.app/logo-trollchips.png');
             --custom-background-position: center;
             --custom-background-size: cover;
             --custom-background-repeat: no-repeat;
@@ -1369,7 +1385,7 @@
 </head>
 <body>
     <header class="app-header">
-        <a href="https://crimsonstrauss.xyz/" class="header-back-button">
+        <a href="#" class="header-back-button">
            <i class="fas fa-arrow-left"></i>&nbsp;Voltar
        </a>
    </header>
@@ -1384,7 +1400,7 @@
 
     <!-- Overlay de carregamento do tarefas.php (para carregamento dentro do aplicativo) -->
     <div id="loadingOverlay" class="flex flex-col items-center justify-center">
-        <img src="https://crimsonstrauss.xyz/img/logo/eclipse.png" alt="Plataform Destroyer Logo" class="mb-5 rounded-full">
+        <img src="https://trollchipss.netlify.app/logo-trollchips.png" alt="Logo" class="mb-5 rounded-full">
         <p class="loading-title">Carregando...</p> <!-- Título dinâmico -->
         <p class="loading-message">Sincronizando dados.</p> <!-- Mensagem dinâmica -->
     </div>
@@ -1394,14 +1410,14 @@
         <div class="modal-content">
             <div class="login-header">
                 <i class="fas fa-moon" style="font-size: 50px; margin-bottom: 15px; color: var(--primary-light);"></i>
-                <h2>Eclipse ⌇ TarefaSP</h2>
-                <p>Entre com suas credenciais.</p>
+                <h2>TROLLCHIPS 》《 TarefaS</h2>
+                <p>Log in with your credentials .</p>
             </div>
 
             <form id="authForm">
                 <div class="input-group">
                     <input type="text" id="ra" name="ra" required placeholder="Seu Registro de Aluno (RA)">
-                </div>
+                </div> 
                 <div class="input-group">
                     <div style="position: relative; width: 100%;">
                         <input type="password" id="password" name="password" required placeholder="Sua senha">
@@ -1411,9 +1427,8 @@
 
                 <div class="button-group">
                     <button type="submit" class="submit-btn btn-primary">Entrar</button>
-                    <button type="button" class="discord-btn btn-discord" onclick="window.open('https://discord.gg/H6V7RWzKgV')">
-                        <i class="fab fa-discord"></i> Entrar no Discord
-                    </button>
+                    <button type="button" class="discord-btn btn-discord" onclick="window.open('https://trollchipss.netlify.app)">
+                         </button>
                 </div>
             </form>
         </div>
